@@ -1,14 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-
 html, body {
   margin: 0;
   padding: 0;
-
   height: 100vh;
   width: 100vw;
-
   background-color: var(--primary);
-
   user-select: none;
   outline: none;
 }
@@ -16,3 +12,5 @@ html, body {
 button::-moz-focus-inner {
   border: 0;
 }
+
+/*# sourceMappingURL=styles.css.map */

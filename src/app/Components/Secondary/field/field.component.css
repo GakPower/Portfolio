@@ -1,0 +1,66 @@
+:host {
+  height: 100%;
+  background-color: var(--primary);
+  margin: 0;
+  padding: 10px 20px;
+  position: relative;
+  color: var(--secondary);
+  font-size: 1.1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+input, textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-family: var(--secondaryFont);
+  padding: 0 20px;
+  width: calc(100% - 40px);
+  min-height: 100%;
+  box-shadow: none;
+}
+input:focus:valid + div, input.hasBeenFocused:valid + div, textarea:focus:valid + div, textarea.hasBeenFocused:valid + div {
+  width: 100%;
+  left: 0;
+  border-bottom-color: green;
+}
+input:focus:invalid + div, input.hasBeenFocused:invalid + div, input.hasBeenFocused:valid.error + div, textarea:focus:invalid + div, textarea.hasBeenFocused:invalid + div, textarea.hasBeenFocused:valid.error + div {
+  width: 100%;
+  left: 0;
+  border-bottom-color: var(--accent);
+}
+input::selection, textarea::selection {
+  background-color: var(--accentHighlight);
+}
+
+textarea {
+  padding-top: 20px;
+  resize: none;
+  min-height: calc(100% - 25px);
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: red;
+}
+
+div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  pointer-events: none;
+  background-color: transparent;
+  border-bottom: 2px solid var(--secondary);
+  transition: width 300ms ease-out, left 300ms ease-out, border-bottom-color 300ms ease-out;
+}
+
+/*# sourceMappingURL=field.component.css.map */

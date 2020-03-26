@@ -1,0 +1,42 @@
+<div>
+  <app-tag [text]="'<html>'"></app-tag>
+  <app-tag class="body" [text]="'<body>'"></app-tag>
+</div>
+<div id="container">
+  <div id="content">
+    <h1 [appAnimate]="{name: 'fromLeftFade', delay: 250}">Contact</h1>
+
+    <p class="desc" [appAnimate]="{name: 'fromLeftFade', delay: 2000}">Feel free to reach out!</p>
+
+    <div id="form">
+      <app-field [animate]="form.name.animate" [value]="form.name.value"
+                 (valueChange)="form.name.value = $event"
+                 [placeholder]="'Name'" [type]="'text'"
+                 [appAnimate]="{name: 'fromLeftFade', delay: 1000}"></app-field>
+      <app-field [animate]="form.email.animate" [value]="form.email.value"
+                 (valueChange)="form.email.value = $event"
+                 [placeholder]="'Email'" [type]="'email'"
+                 [appAnimate]="{name: 'fromLeftFade', delay: 1250}"></app-field>
+      <app-field [animate]="form.subject.animate" [value]="form.subject.value"
+                 (valueChange)="form.subject.value = $event"
+                 [placeholder]="'Subject'" [type]="'text'"
+                 [appAnimate]="{name: 'fromLeftFade', delay: 1500}"></app-field>
+      <app-field id="textarea" [animate]="form.message.animate"
+                 [value]="form.message.value" (valueChange)="form.message.value = $event"
+                 [placeholder]="'Message'" [type]="'textarea'"
+                 [appAnimate]="{name: 'fromLeftFade', delay: 1750}"></app-field>
+      <div id="sendButtonDiv" [appAnimate]="{name: 'fromLeftFade', delay: 2000}">
+        <div>
+          <span [className]="sent ? 'sent' : ''">Sent</span>
+          <button (click)="submit()" [disabled]="disabled">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div #map id="map" [appAnimate]="{name: 'fade', delay: 2250}"></div>
+</div>
+<div>
+  <app-tag class="body" [text]="'</body>'"></app-tag>
+  <app-tag [text]="'</html>'"></app-tag>
+</div>

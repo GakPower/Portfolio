@@ -1,0 +1,60 @@
+:host {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 55px auto 55px;
+}
+
+@keyframes fromLeftFade {
+  from {
+    opacity: 0;
+    margin-left: -15%;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+#container {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+#container #content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 10%;
+}
+#container #content h1 {
+  display: flex;
+  flex-direction: column;
+  color: var(--accent);
+  font-size: 3rem;
+  font-family: var(--primaryFont);
+}
+#container #content h1::before {
+  content: "<h1>";
+  color: var(--tagColor);
+  font-size: 1rem;
+  font-family: var(--secondaryFont);
+  font-weight: normal;
+}
+#container #content h1::after {
+  content: "</h1>";
+  color: var(--tagColor);
+  font-size: 1rem;
+  font-family: var(--secondaryFont);
+  font-weight: normal;
+}
+#container #content .desc {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--textWhite);
+  font-family: var(--secondaryFont);
+}
+#container #content .desc span {
+  color: var(--accentText);
+}
+
+/*# sourceMappingURL=skills.component.css.map */

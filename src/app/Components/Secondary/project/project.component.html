@@ -1,0 +1,54 @@
+<div id="container">
+
+  <span id="new" [style.opacity]="new ? '1' : '0'">New</span>
+
+  <div id="like">
+    <span>{{likes}}</span>
+    <div (click)="likeIt()">
+      <svg [class.filled]="filled" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+           width="24" height="24" viewBox="0 0 172 172"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-size="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><path d="" fill="none"></path><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="none"></path><path d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z" fill="none"></path><path d="M0,172v-172h172v172z" fill="none"></path><path d="M3.44,168.56v-165.12h165.12v165.12z" fill="none"></path><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="none"></path><path d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z" fill="none"></path><g fill="#F00"><path d="M118.25,21.5c-20.7475,0 -32.25,14.97833 -32.25,14.97833c0,0 -11.5025,-14.97833 -32.25,-14.97833c-21.77233,0 -39.41667,17.64433 -39.41667,39.41667c0,39.41667 71.66667,89.58333 71.66667,89.58333c0,0 71.66667,-50.16667 71.66667,-89.58333c0,-21.77233 -17.64433,-39.41667 -39.41667,-39.41667z"></path></g></g>
+      </svg>
+      <svg id="outlineHeart" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+           width="24" height="24" viewBox="0 0 172 172"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-size="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g id="original-icon" fill="#F00"><path d="M118.25,21.5c-20.7475,0 -32.25,14.97833 -32.25,14.97833c0,0 -11.5025,-14.97833 -32.25,-14.97833c-21.77233,0 -39.41667,17.64433 -39.41667,39.41667c0,39.41667 71.66667,89.58333 71.66667,89.58333c0,0 71.66667,-50.16667 71.66667,-89.58333c0,-21.77233 -17.64433,-39.41667 -39.41667,-39.41667zM86,132.71233c-24.9615,-19.1565 -57.33333,-50.96933 -57.33333,-71.79567c0,-13.83167 11.25167,-25.08333 25.08333,-25.08333c17.21433,0 32.25,20.8335 32.25,20.8335c0,0 15.33667,-20.8335 32.25,-20.8335c13.83167,0 25.08333,11.25167 25.08333,25.08333c0,20.82633 -32.37183,52.63917 -57.33333,71.79567z"></path></g><path d="" fill="none"></path><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="none"></path><path d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z" fill="none"></path><path d="M0,172v-172h172v172z" fill="none"></path><path d="M3.44,168.56v-165.12h165.12v165.12z" fill="none"></path><path d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z" fill="none"></path><path d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z" fill="none"></path></g>
+      </svg>
+    </div>
+  </div>
+
+  <div id="logo"></div>
+
+  <span id="title">{{name}}</span>
+
+  <div id="desc">
+    <p>{{description}}</p>
+    <div id="buttons">
+      <div (click)="openInNewTab(codeLink)">
+        <span>Code</span>
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+             width="32" height="32"
+             viewBox="0 0 172 172"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-size="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g id="original-icon" fill="#000000"><path d="M78.11667,15.05c-32.96667,3.58333 -59.48333,30.1 -63.06667,62.35c-4.3,35.83333 17.91667,66.65 49.45,76.68333v-16.48333c0,0 -2.86667,0.71667 -6.45,0.71667c-10.03333,0 -14.33333,-8.6 -15.05,-13.61667c-0.71667,-2.86667 -2.15,-5.01667 -4.3,-7.16667c-2.15,-0.71667 -2.86667,-0.71667 -2.86667,-1.43333c0,-1.43333 2.15,-1.43333 2.86667,-1.43333c4.3,0 7.88333,5.01667 9.31667,7.16667c3.58333,5.73333 7.88333,7.16667 10.03333,7.16667c2.86667,0 5.01667,-0.71667 6.45,-1.43333c0.71667,-5.01667 2.86667,-10.03333 7.16667,-12.9c-16.48333,-3.58333 -28.66667,-12.9 -28.66667,-28.66667c0,-7.88333 3.58333,-15.76667 8.6,-21.5c-0.71667,-1.43333 -1.43333,-5.01667 -1.43333,-10.03333c0,-2.86667 0,-7.16667 2.15,-11.46667c0,0 10.03333,0 20.06667,9.31667c3.58333,-1.43333 8.6,-2.15 13.61667,-2.15c5.01667,0 10.03333,0.71667 14.33333,2.15c9.31667,-9.31667 20.06667,-9.31667 20.06667,-9.31667c1.43333,4.3 1.43333,8.6 1.43333,11.46667c0,5.73333 -0.71667,8.6 -1.43333,10.03333c5.01667,5.73333 8.6,12.9 8.6,21.5c0,15.76667 -12.18333,25.08333 -28.66667,28.66667c4.3,3.58333 7.16667,10.03333 7.16667,16.48333v23.65c29.38333,-9.31667 50.16667,-36.55 50.16667,-68.08333c0,-43 -36.55,-76.68333 -79.55,-71.66667z"></path></g></g>
+        </svg>
+      </div>
+
+      <div *ngIf="liveLink" (click)="openInNewTab(liveLink)">
+        <span>Live</span>
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+             width="32" height="32"
+             viewBox="0 0 172 172"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-size="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g id="original-icon" fill="#000000"><path d="M86,28.66667c-49.149,0 -72.48579,42.13026 -78.14746,54.15593c-0.946,2.00667 -0.946,4.33415 0,6.34082c5.66167,12.03283 28.99846,54.16992 78.14746,54.16992c48.977,0 72.32947,-41.83228 78.09147,-54.02994c0.989,-2.09983 0.989,-4.50694 0,-6.60678c-5.762,-12.19766 -29.11447,-54.02994 -78.09147,-54.02994zM86,50.16667c19.78717,0 35.83333,16.04617 35.83333,35.83333c0,19.78717 -16.04617,35.83333 -35.83333,35.83333c-19.78717,0 -35.83333,-16.04617 -35.83333,-35.83333c0,-19.78717 16.04617,-35.83333 35.83333,-35.83333zM86,64.5c-11.87412,0 -21.5,9.62588 -21.5,21.5c0,11.87412 9.62588,21.5 21.5,21.5c11.87412,0 21.5,-9.62588 21.5,-21.5c0,-11.87412 -9.62588,-21.5 -21.5,-21.5z"></path></g></g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div id="tags">
+    <div *ngIf="angular" style="background-color: #DC0530"><span>#angular</span></div>
+    <div *ngIf="firebase" style="background-color: #FFCB2B"><span>#firebase</span></div>
+    <div *ngIf="typescript" style="background-color: #0076C6"><span>#typescript</span></div>
+    <div *ngIf="css" style="background-color: #1B84C1"><span>#css3</span></div>
+
+    <div *ngIf="sass" style="background-color: #CD6799"><span>#sass</span></div>
+
+    <div *ngIf="java" style="background-color: #E82626"><span>#java</span></div>
+    <div *ngIf="javaFX" style="background-color: #E76F00"><span>#javafx</span></div>
+    <div *ngIf="SQL" style="background-color: #3096CD"><span>#sql</span></div>
+  </div>
+</div>

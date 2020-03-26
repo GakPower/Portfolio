@@ -1,0 +1,30 @@
+<div>
+  <app-tag [text]="'<html>'"></app-tag>
+  <app-tag class="body" [text]="'<body>'"></app-tag>
+</div>
+
+<div id="container">
+  <div id="content">
+    <h1 [appAnimate]="{name: 'fromLeftFade', delay: 250}">About</h1>
+
+    <p class="desc" [appAnimate]="{name: 'fromLeftFade', delay: 750}">
+      <span>Programming enthusiast, problem solver and perfectionist</span>,
+      now attending bachelor’s degree studies on Information and Communication
+      Technology at KTH Royal Institute of Technology in Stockholm.
+    </p>
+    <p class="desc" [appAnimate]="{name: 'fromLeftFade', delay: 1000}">
+      Worked on many <span id="projectsSpan" routerLink="/myWork">personal projects</span>
+      with curiosity for Computer Science as my driving
+      force.
+    </p>
+    <p class="desc" [appAnimate]="{name: 'fromLeftFade', delay: 1250}">
+      Currently interested in a full-time job
+      as a <span>Front-End Web Developer or Java Developer</span>.
+    </p>
+
+  </div>
+</div>
+<div>
+  <app-tag class="body" [text]="'</body>'"></app-tag>
+  <app-tag [text]="'</html>'"></app-tag>
+</div>

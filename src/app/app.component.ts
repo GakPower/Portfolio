@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ProjectPortfolio';
+
+  openInNewTab(url) {
+    window.open(url, '_blank').focus();
+  }
 }

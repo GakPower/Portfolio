@@ -1,0 +1,12 @@
+<input *ngIf="type !== 'textarea'"
+       [value]="value" #input (keyup)="valueChange.emit(input.value)"
+       [className]="hasEverBeenFocused || animate ? 'hasBeenFocused' : ''"
+       placeholder="{{placeholder}}" type="{{type === 'textarea' ? 'text' : type}}"
+       required="{{type}}" (focus)="onFocus()" aria-label="">
+
+<textarea *ngIf="type === 'textarea'"
+          [value]="value" #textarea (keyup)="valueChange.emit(textarea.value)"
+          [className]="hasEverBeenFocused || animate ? 'hasBeenFocused' : ''"
+          placeholder="{{placeholder}}" required="{{type}}" (focus)="onFocus()" aria-label="">
+</textarea>
+<div></div>

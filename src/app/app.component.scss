@@ -1,0 +1,190 @@
+::ng-deep :root {
+  --primary: #1D1D1D;
+  --primaryDisabled: #2b2b2b;
+  --primaryDark: #181818;
+  --secondary: #595959;
+  --secondaryLight: #7d7d7d;
+  --textWhite: #d5d5d5;
+  --accent: #a50000;
+  --accentDark: #950000;
+  --accentText: #e20000;
+  --accentHover: rgba(205, 0, 0, 0.9);
+  --accentHighlight: rgba(165, 0, 0, 0.4);
+
+  --logoColor: #292929;
+  --bigLogoColor: #232323;
+
+  --tagColor: rgba(74, 74, 75, 0.45);
+
+  --primaryFont: 'Viga', sans-serif;
+  --secondaryFont: 'Josefin Sans', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  outline: none;
+}
+
+:host {
+  display: flex;
+  height: 100%;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 70px;
+
+  z-index: 5;
+
+  background-color: var(--primaryDark);
+
+  #logo {
+    margin-left: 10px;
+
+    cursor: pointer;
+  }
+
+  #contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 140px;
+
+    cursor: pointer;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 50%;
+
+      &:hover svg #original-icon {
+        fill: var(--accent);
+      }
+    }
+  }
+}
+
+ul {
+  top: 0;
+  display: flex;
+
+  list-style: none;
+
+  height: 70px;
+
+  background-color: var(--primaryDark);
+
+  transition: top 300ms ease-in,
+    left 300ms ease-in;
+
+  li {
+    position: relative;
+    width: 70px;
+    height: 70px;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    background-color: var(--primaryDark);
+
+    * {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition:
+        transform 300ms ease-in,
+        opacity 300ms linear;
+    }
+
+    span {
+      transform: translate(-50%, -150%);
+      opacity: 0;
+
+      color: var(--secondaryLight);
+      font-family: var(--secondaryFont);
+      font-size: 1.1rem;
+
+      text-align: center;
+    }
+    svg {
+      transform: translate(-50%, -50%);
+
+      #original-icon {
+        fill: var(--secondaryLight)
+      }
+    }
+
+    &:hover {
+      span {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
+
+      svg {
+        transform: translate(-50%, 50%);
+        opacity: 0;
+      }
+    }
+    &.focused {
+      background-color: var(--primary);
+
+      span {
+        color: var(--accent)
+      }
+      svg #original-icon {
+        fill: var(--accent);
+      }
+    }
+  }
+}
+
+main {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  height: calc(100% - 70px);
+  background-color: var(--primary);
+
+  transition: height 300ms ease-out;
+
+  &> *:last-child {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    & * {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav #contacts {
+    width: 30%;
+  }
+  ul {
+    position: fixed;
+    top: calc(100% - 70px);
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  main {
+    height: calc(100% - 140px);
+
+    overflow-y: auto;
+  }
+}

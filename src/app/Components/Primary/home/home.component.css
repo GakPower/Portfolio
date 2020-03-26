@@ -1,0 +1,130 @@
+:host {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 55px auto 55px;
+}
+
+@keyframes circleFade {
+  from {
+    opacity: 1;
+    clip-path: circle(0 at 50% 50%);
+  }
+  to {
+    opacity: 1;
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+@keyframes polygonFade {
+  from {
+    opacity: 0.5;
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+  }
+  to {
+    opacity: 0.5;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  }
+}
+@keyframes fromLeftFade {
+  from {
+    opacity: 0;
+    margin-left: -15%;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+#container {
+  width: 99%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+#container #bg {
+  margin-right: 20px;
+}
+#container #bg > svg .G {
+  opacity: 0;
+  fill: var(--bigLogoColor);
+  animation: circleFade forwards 2000ms 2000ms;
+}
+#container #bg > svg .K {
+  opacity: 0;
+  fill: var(--accentDark);
+  animation: polygonFade forwards 2000ms 1000ms;
+}
+#container #bg > svg .b0641276-44eb-4036-aa9e-9cce930f63d9 {
+  fill: #fff;
+}
+#container #content {
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 5%;
+  z-index: 10;
+}
+#container #content h1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  color: var(--textWhite);
+  font-family: var(--primaryFont);
+}
+#container #content h1::before {
+  content: "<h1>";
+  color: var(--tagColor);
+  font-size: 1rem;
+  font-family: var(--secondaryFont);
+  font-weight: normal;
+}
+#container #content h1::after {
+  content: "</h1>";
+  color: var(--tagColor);
+  font-size: 1rem;
+  font-family: var(--secondaryFont);
+  font-weight: normal;
+}
+#container #content #desc {
+  color: var(--secondaryLight);
+  font-family: var(--secondaryFont);
+}
+#container #content button {
+  margin: 20px 0;
+  padding: 10px 5px;
+  max-width: 150px;
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-family: var(--secondaryFont);
+  border: 1px solid var(--accentDark);
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 300ms ease-in, background-color 300ms ease-in;
+}
+#container #content button:hover {
+  color: var(--textWhite);
+  background-color: var(--accent);
+}
+
+@media only screen and (max-width: 1000px) {
+  #container #bg {
+    position: absolute;
+    right: 0;
+  }
+  #container #bg svg {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  #container #bg {
+    margin-right: 5px;
+  }
+  #container #content h1 {
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=home.component.css.map */

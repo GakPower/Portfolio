@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  width: fit-content;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+:host.body {
+  margin-left: 25px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  color: var(--tagColor);
+  font-family: var(--secondaryFont);
+}
+
+/*# sourceMappingURL=tag.component.css.map */

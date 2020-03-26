@@ -1,0 +1,29 @@
+<div>
+  <app-tag [text]="'<html>'"></app-tag>
+  <app-tag class="body" [text]="'<body>'"></app-tag>
+</div>
+<div id="container">
+  <div id="content">
+    <h1 [appAnimate]="{name: 'fromLeftFade', delay: 250}">Skills</h1>
+
+    <p class="desc" [appAnimate]="{name: 'fromLeftFade', delay: 500}">
+      <span>Passionate</span> with programming in general and from the age of 12 I have
+      <span>self-taught</span> HTML5, CSS(Sass), Javascript (TypeScript), Java, Python, C and C++.
+    </p>
+    <p class="desc" [appAnimate]="{name: 'fromLeftFade', delay: 750}">
+      Also, I have used some Libraries and <span>Frameworks</span> to make the result even better,
+      like, JavaFx, <span>Angular</span> and Firebase. In addition to that I have worked
+      with both SQL and NoSQL databases.
+    </p>
+    <p class="desc" [appAnimate]="{name: 'fromLeftFade', delay: 1000}">
+      I have no previous work experience.
+      However, my passion has driven me on creating some interesting projects.
+    </p>
+
+  </div>
+</div>
+
+<div>
+  <app-tag class="body" [text]="'</body>'"></app-tag>
+  <app-tag [text]="'</html>'"></app-tag>
+</div>

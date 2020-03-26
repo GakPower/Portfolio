@@ -1,0 +1,36 @@
+<div>
+  <app-tag [text]="'<html>'"></app-tag>
+  <app-tag class="body" [text]="'<body>'"></app-tag>
+</div>
+
+<div id="container">
+  <app-project
+    [name]="'ChatIt'" [logo]="'url(\'/../../../assets/ChatItLogo.svg\')'"
+    [description]="'Website with global group room for chatting'"
+    [color]="'#2A2B2A'" [angular]="true" [firebase]="true" [typescript]="true"
+    [sass]="true" [codeLink]="'https://github.com/GakPower/ChatIt'"
+    [liveLink]="'https://chatit-1.firebaseapp.com/login'" [new]="true"
+    [appAnimate]="{name: 'fromTopFade', delay: 250}">
+  </app-project>
+  <app-project
+    [name]="'BHive'" [logo]="'url(\'/../../../assets/BHiveLogo.svg\')'"
+    [description]="'Website to monitor and control your BHive Arduino scales'"
+    [color]="'#FFAC1D'" [angular]="true" [firebase]="true" [typescript]="true"
+    [codeLink]="'https://github.com/GakPower/BHiveAngular'"
+    [liveLink]="'https://www.bhive.team'"
+    [appAnimate]="{name: 'fromTopFade', delay: 500}">
+  </app-project>
+  <app-project
+    [name]="'Hayabusa'" [logo]="'url(\'/../../../assets/hayabusaLogo.png\')'"
+    [description]="'Application to help truck drivers keep track of their trips'"
+    [color]="'#d62600'" [java]="true" [javaFX]="true" [SQL]="true"
+    [codeLink]="'https://github.com/GakPower/Hayabusa_Project_v2.3'"
+    [appAnimate]="{name: 'fromTopFade', delay: 750}">
+  </app-project>
+</div>
+
+<div>
+  <app-tag class="body" [text]="'</body>'"></app-tag>
+  <app-tag [text]="'</html>'"></app-tag>
+</div>
+
