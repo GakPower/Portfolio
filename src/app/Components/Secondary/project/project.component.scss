@@ -181,6 +181,10 @@
 }
 
 @media only screen and (max-width: 300px) {
+  :host {
+    max-width: 200px;
+    min-height: 300px;
+  }
   #container {
     #logo {
       width: 100px;
