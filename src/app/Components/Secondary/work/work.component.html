@@ -1,0 +1,40 @@
+<div id="container">
+
+  <div id="logo"></div>
+
+  <span id="title">{{name}}</span>
+
+  <div id="desc">
+    <p>As: <span>{{role}}</span></p>
+    <p>Period: <span>{{period}}</span></p>
+    <p>{{description}}</p>
+    <div id="buttons">
+      <div *ngIf="liveLink" (click)="openInNewTab(liveLink)">
+        <span>Live</span>
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+             width="32" height="32"
+             viewBox="0 0 172 172"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-size="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g id="original-icon" fill="#000000"><path d="M86,28.66667c-49.149,0 -72.48579,42.13026 -78.14746,54.15593c-0.946,2.00667 -0.946,4.33415 0,6.34082c5.66167,12.03283 28.99846,54.16992 78.14746,54.16992c48.977,0 72.32947,-41.83228 78.09147,-54.02994c0.989,-2.09983 0.989,-4.50694 0,-6.60678c-5.762,-12.19766 -29.11447,-54.02994 -78.09147,-54.02994zM86,50.16667c19.78717,0 35.83333,16.04617 35.83333,35.83333c0,19.78717 -16.04617,35.83333 -35.83333,35.83333c-19.78717,0 -35.83333,-16.04617 -35.83333,-35.83333c0,-19.78717 16.04617,-35.83333 35.83333,-35.83333zM86,64.5c-11.87412,0 -21.5,9.62588 -21.5,21.5c0,11.87412 9.62588,21.5 21.5,21.5c11.87412,0 21.5,-9.62588 21.5,-21.5c0,-11.87412 -9.62588,-21.5 -21.5,-21.5z"></path></g></g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div id="tags">
+    <div *ngIf="angular" style="background-color: #DC0530"><span>#angular</span></div>
+
+
+    <div *ngIf="reactNative" style="background-color: #61DAFB"><span>#react_native</span></div>
+
+    <div *ngIf="redux" style="background-color: #764ABC"><span>#redux</span></div>
+    <div *ngIf="firebase" style="background-color: #FFCB2B"><span>#firebase</span></div>
+
+    <div *ngIf="typescript" style="background-color: #0076C6"><span>#typescript</span></div>
+
+    <div *ngIf="css" style="background-color: #1B84C1"><span>#css3</span></div>
+    <div *ngIf="sass" style="background-color: #CD6799"><span>#sass</span></div>
+
+    <div *ngIf="java" style="background-color: #E82626"><span>#java</span></div>
+    <div *ngIf="javaFX" style="background-color: #E76F00"><span>#javafx</span></div>
+    <div *ngIf="SQL" style="background-color: #3096CD"><span>#sql</span></div>
+  </div>
+</div>
