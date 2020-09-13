@@ -15,6 +15,7 @@ import {environment} from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AnimateDirective } from './Directives/animate.directive';
+import { WorkComponent } from './Components/Secondary/work/work.component';
 
 const routes = [
   { path: 'home', component: HomeComponent},
@@ -37,7 +38,8 @@ const routes = [
     TagComponent,
     FieldComponent,
     ProjectComponent,
-    AnimateDirective
+    AnimateDirective,
+    WorkComponent
   ],
     imports: [
       BrowserModule,
