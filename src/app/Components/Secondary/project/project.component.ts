@@ -59,8 +59,7 @@ export class ProjectComponent implements OnInit, AfterContentInit {
     } else {
       this.likes++;
       this.incrementCounter(1);
-
-      this.cookieService.set(this.name, '1', new Date(new Date().setMinutes(new Date().getMinutes() + 1)));
+      this.cookieService.set(this.name, '1');
     }
     this.filled = !this.filled;
   }
