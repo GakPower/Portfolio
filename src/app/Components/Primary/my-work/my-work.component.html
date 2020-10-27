@@ -9,11 +9,19 @@
   <div id="projectContainer">
     <app-project
       [name]="'ChatIt'" [logo]="'url(\'/../../../assets/ChatItLogo.svg\')'"
-      [description]="'Website with global group room for chatting'"
-      [color]="'#2A2B2A'" [angular]="true" [firebase]="true" [typescript]="true"
-      [sass]="true" [codeLink]="'https://github.com/GakPower/ChatIt'"
-      [liveLink]="'https://chatit-1.firebaseapp.com/login'" [new]="true"
+      [description]="'The frontend code part of a MEAN full-stack website with global group room for chatting'"
+      [color]="'#2A2B2A'" [typescript]="true" [react]="true" [redux]="true"
+      [sass]="true" [codeLink]="'https://github.com/GakPower/ChatItReact'"
+      [liveLink]="'https://chatit.site'" [new]="true"
       [appAnimate]="{name: 'fromTopFade', delay: 750}">
+    </app-project>
+    <app-project
+      [name]="'ChatIt Backend'" [logo]="'url(\'/../../../assets/ChatItLogo.svg\')'"
+      [description]="'The backend code part of a MEAN full-stack website with global group room for chatting'"
+      [color]="'#2A2B2A'" [node]="true" [javascript]="true" [socketIO]="true"
+      [express]="true" [jwt]="true" [mongoDB]="true"
+      [codeLink]="'https://github.com/GakPower/ChatItReactBackend'" [new]="true"
+      [appAnimate]="{name: 'fromTopFade', delay: 1000}">
     </app-project>
     <app-project
       [name]="'BHive'" [logo]="'url(\'/../../../assets/BHiveLogo.svg\')'"
@@ -21,24 +29,24 @@
       [color]="'#FFAC1D'" [angular]="true" [firebase]="true" [typescript]="true"
       [codeLink]="'https://github.com/GakPower/BHiveAngular'"
       [liveLink]="'https://www.bhive.team'"
-      [appAnimate]="{name: 'fromTopFade', delay: 1000}">
+      [appAnimate]="{name: 'fromTopFade', delay: 1250}">
     </app-project>
     <app-project
       [name]="'Hayabusa'" [logo]="'url(\'/../../../assets/hayabusaLogo.png\')'"
       [description]="'Application to help truck drivers keep track of their trips'"
       [color]="'#d62600'" [java]="true" [javaFX]="true" [SQL]="true"
       [codeLink]="'https://github.com/GakPower/Hayabusa_Project_v2.3'"
-      [appAnimate]="{name: 'fromTopFade', delay: 1250}">
+      [appAnimate]="{name: 'fromTopFade', delay: 1500}">
     </app-project>
   </div>
-  <h1 [appAnimate]="{name: 'fromLeftFade', delay: 1500}">Work Experience</h1>
+  <h1 [appAnimate]="{name: 'fromLeftFade', delay: 1750}">Work Experience</h1>
   <div id="workContainer">
     <app-work
       [name]="'Endometrix'" [logo]="'url(\'/../../../assets/EndometrixLogo.png\')'"
       [description]="'Mobile app that through daily tracking, helps you recognize patterns within your health so you can demand the treatment you deserve'"
       [color]="'#87E2E9'" [reactNative]="true" [redux]="true" [firebase]="true"
       [liveLink]="'https://endo-metrix.com/'" [role]="'App Developer(Intern)'" [period]="'Jul 2020 - now'"
-      [appAnimate]="{name: 'fromTopFade', delay: 2000}">
+      [appAnimate]="{name: 'fromTopFade', delay: 2250}">
     </app-work>
   </div>
 </div>
