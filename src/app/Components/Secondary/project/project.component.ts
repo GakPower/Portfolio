@@ -16,14 +16,23 @@ export class ProjectComponent implements OnInit, AfterContentInit {
   @Input() color;
 
   @Input() angular;
+  @Input() react;
+  @Input() redux;
   @Input() firebase;
   @Input() typescript;
+  @Input() javascript;
+
   @Input() css;
   @Input() sass;
+  @Input() express;
+  @Input() node;
+  @Input() jwt;
+  @Input() socketIO;
 
   @Input() java;
   @Input() javaFX;
   @Input() SQL;
+  @Input() mongoDB;
 
   @Input() liveLink;
   @Input() codeLink;
