@@ -30,6 +30,8 @@ input, textarea {
   min-height: 100%;
 
   box-shadow: none;
+  user-select: none;
+  outline: 0;
 
   &:focus:valid + div,
   &.hasBeenFocused:valid + div{
