@@ -113,7 +113,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
     Email.send({
       SecureToken: environment.mailJS,
       From : 'bhiveprojectmail@gmail.com',
-      To : 'bhiveprojectmail@gmail.com',
+      To : 'gkotDev@gmail.com',
       Subject : 'Contact from Portfolio',
       Body : 'Name: ' + this.form.name.value +
         '<br>Email: ' + this.form.email.value +
