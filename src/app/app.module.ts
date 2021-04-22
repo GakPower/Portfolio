@@ -16,6 +16,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AnimateDirective } from './Directives/animate.directive';
 import { WorkComponent } from './Components/Secondary/work/work.component';
+import { AgmCoreModule } from '@agm/core';
 
 const routes = [
   { path: 'home', component: HomeComponent},
@@ -46,6 +47,9 @@ const routes = [
       RouterModule.forRoot(routes),
       AngularFireModule.initializeApp(environment.firebase),
       AngularFirestoreModule,
+      AgmCoreModule.forRoot({
+        apiKey: environment.googleAPI
+      })
     ],
   providers: [CookieService],
   bootstrap: [AppComponent]

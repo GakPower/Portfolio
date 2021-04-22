@@ -1,5 +1,4 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {} from 'googlemaps';
+import {Component} from '@angular/core';
 import 'src/assets/smtp.js';
 declare let Email: any;
 import {environment} from 'src/environments/environment';
@@ -9,11 +8,7 @@ import {environment} from 'src/environments/environment';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit, AfterViewInit {
-
-  @ViewChild('map', {static: false}) mapElement: any;
-  map: google.maps.Map;
-
+export class ContactComponent {
   form = {
     name: {
       value: '',
@@ -38,6 +33,11 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
   sent = false;
   disabled = false;
+
+  lat = 59.402611;
+  lng = 17.869814;
+  zoom = 5;
+  mapType = 'roadmap';
 
   constructor() { }
 
@@ -129,11 +129,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
     );
   }
 
-  ngOnInit() {
-  }
-
-  ngAfterViewInit(): void {
-    const styledMapType = new google.maps.StyledMapType(
+  mapStyle = 
       [
         {
           elementType: 'geometry',
@@ -379,47 +375,9 @@ export class ContactComponent implements OnInit, AfterViewInit {
             }
           ]
         }
-      ],
-      {name: 'Map'});
+    ];
 
-    const latLng = {lat: 59.402611, lng: 17.869814};
-    const mapProperties = {
-      center: new google.maps.LatLng(latLng),
-      zoom: 5,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      mapTypeControlOptions: {
-        mapTypeIds: ['styled_map']
-      },
-      disableDefaultUI: true
-    };
-    this.map = new google.maps.Map(this.mapElement.nativeElement, mapProperties);
-
-    this.map.mapTypes.set('styled_map', styledMapType);
-    this.map.setMapTypeId('styled_map');
-
-    const marker = new google.maps.Marker({
-      position: latLng,
-      map: this.map,
-      icon: {
-        anchor: new google.maps.Point(16, 16),
-        url: 'https://img.icons8.com/material-outlined/32/a50000/marker.png'
-      }
-    });
-
-    const contentString = '<div id="content" >' +
-      '<div id="siteNotice"></div>' +
-      '<div id="bodyContent" style="font-family: var(--secondaryFont); font-size: 1.2rem">' +
-      '<p><b>Georgios Kotsiopoulos</b> <span style="font-size: .9rem">c/o Konstantina Kotsiopoulou</span></p>' +
-      '<p><b>Attackvägen 6 Järfälla 17563</b></p>' +
-      '</div>' +
-      '</div>';
-
-    const infowindow = new google.maps.InfoWindow({
-      content: contentString,
-    });
-
-    marker.addListener('click', () => {
-      infowindow.open(this.map, marker);
-    });
+  icon = {
+    url: 'https://img.icons8.com/material-outlined/32/a50000/marker.png',
   }
 }

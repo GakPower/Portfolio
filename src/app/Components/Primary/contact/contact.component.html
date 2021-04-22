@@ -33,8 +33,28 @@
       </div>
     </div>
   </div>
-
-  <div #map id="map" [appAnimate]="{name: 'fade', delay: 2250}"></div>
+  
+  <div id="mapWrapper" [appAnimate]="{name: 'fade', delay: 2250}">
+    <agm-map
+    [latitude]="lat"
+    [longitude]="lng"
+    [mapTypeId]="mapType"
+    [styles]="mapStyle"
+    [zoom]="zoom"
+    [disableDefaultUI]="true">
+    <agm-marker [latitude]="lat" [longitude]="lng" [label]="''" [iconUrl]="icon">
+      <agm-info-window>
+        <div>
+          <div id="bodyContent" style="font-family: var(--secondaryFont); font-size: 1.2rem">
+          <p><b>Georgios Kotsiopoulos </b> <span style="font-size: .9rem">c/o Konstantina Kotsiopoulou</span></p>
+          <p><b>Attackvägen 6 Järfälla 17563</b></p>
+          </div>
+          </div>
+      </agm-info-window>
+    </agm-marker>
+    
+  </agm-map>
+  </div>
 </div>
 <div>
   <app-tag class="body" [text]="'</body>'"></app-tag>

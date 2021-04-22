@@ -124,7 +124,7 @@
         display: flex;
         justify-content: flex-end;
         grid-area: sendButton;
-        &> div {
+        &>div {
           position: relative;
           width: 120px;
           height: 40px;
@@ -184,11 +184,17 @@
     }
   }
 
-  #map {
+  #mapWrapper {
     width: 80%;
     height: 100%;
     min-height: 500px;
     margin: 20px 10px;
+
+    background-color: red;
+
+    agm-map {
+      height: 100%;
+    }
   }
 }
 
@@ -211,7 +217,7 @@
       width: 38%;
     }
 
-    #map {
+    #mapWrapper {
       width: 50%;
     }
   }
